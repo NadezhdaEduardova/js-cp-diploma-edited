@@ -1,22 +1,26 @@
-function createRequest(method, url, data, callback) {
+function getRequest(body, callback) {
+  return new Promise((resolve, reject) => {
     let xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
-    xhr.responseType = 'json';
-    xhr.onerror = function () {
-      console.error('Произошла ошибка при отправке запроса');
-      callback(null);
-    };
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4 && xhr.status >= 200 && xhr.status < 300) {
-        try {
-          let response = xhr.response;
+
+    xhr.open("POST", "https://jscp-diplom.netoserver.ru/", true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.responseType = "json";
+    xhr.send(body);
+
+    xhr.onload = () => {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        const response = xhr.response;
+        if (callback) {
           callback(response);
-        } catch (error) {
-          console.error('Произошла ошибка: ', error);
-          callback(null);
         }
+        resolve(response);                                                      
+      } else {
+        reject(xhr.statusText);
       }
     };
-    xhr.send(data);
-  }
+
+    xhr.onerror = () => {
+      reject(xhr.statusText);
+    };
+  });
+}
