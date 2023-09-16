@@ -13,9 +13,6 @@ function getRequest(body, callback) {
         if (callback) {
           callback(response);
         }
-        resolve(response);                                                      
-      } else {
-        reject(xhr.statusText);
       }
     };
 
