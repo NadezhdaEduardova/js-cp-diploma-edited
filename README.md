@@ -2,6 +2,9 @@
 ### При написании дипломного проекта использоваись технологии: Html, CSS, Javascript, Git.
 ### -    Ссылка на GitHub Pages website: https://nadezhdaeduardova.github.io/js-cp-diploma-edited/
 
+Используемые технологии: Html, CSS, Javascript, Git.
+Ссылка на GitHub Pages website: https://nadezhdaeduardova.github.io/js-cp-diploma-edited/
+
 ## Создание «информационной системы для предварительного бронирования билетов».
 
 ### Студенту предоставляются следующие компоненты системы:
