@@ -27,7 +27,7 @@ function generateTicket() {
   Начало сеанса: ${selectSeanse.seanceTime}
   Билет действителен строго на свой сеанс`;
 
-  let qrcode = QRcreator(textQR, { image: "SVG" });
+  let qrcode = QRCreator(textQR, { image: "SVG" });
   qrcode.download();
   document.querySelector(".ticket__info-qr").append(qrcode.result);
 }
