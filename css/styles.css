@@ -445,55 +445,32 @@ body {
 
 /*===================  адаптация  ================================*/
 
-@media screen and (max-width: 1026px) {
-  .page-header, nav, main {
-    padding: 0 18px;
-  }
 
-  .movie .movie__poster::after {
-    right: -0.7rem;
+@media (max-width: 344px) {
+  .conf-step {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
-@media screen and (max-width: 478px) {
+@media screen and (max-width: 425px) {
   .movie .movie__info {
-      flex-wrap: wrap;
-    }
+    flex-direction: column;
+  }
+
+  .movie .movie__description {
+    padding-left: 0;
+    margin-bottom: 3rem;
+  }
 
   .movie .movie__poster {
+    height: auto;
+    width: 50%;
     margin: auto;
   }
 
   .movie .movie__poster .movie__poster-image {
-    width: 14.5rem;
-    height: 19.5rem;
-  }
-
-  .movie .movie__poster::after {
-    right: -2.7rem;
-  }
-
-  .movie .movie__data {
-    margin-bottom: 1rem;
+    height: auto;
+    width: 100%;
   }
 }
-
-
-@media screen and (min-width: 479px) {
-  .page-nav .page-nav__day {
-    padding: 1rem 2rem;
-  }
-}
-
-@media screen and (min-width: 990px) {
-  .page-header, nav, main {
-    width: 990px;
-    margin: auto;
-  }
-
-  .movie, .buying {
-    border-radius: 2px;
-  }
-}
-
-
