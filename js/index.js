@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     let daydayLinks = Array.from(document.querySelectorAll(".page-nav__day"));
-		let movieSeances = Array.from(document.querySelectorAll(".movie-seances__time"));
+    let movieSeances = Array.from(document.querySelectorAll(".movie-seances__time"));
     
     daydayLinks.forEach(daydayLink => daydayLink.addEventListener('click', (event) => {
       event.preventDefault();
@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let markTimeNow = Math.trunc(+new Date() / 1000);
         movieSeance.dataset.seanceTimeStamp = markTimeSeance;
         if ((markTimeSeance - markTimeNow) > 0) {
+	  movieSeance.classList.remove('acceptin-button-disabled');	
         } else {
           movieSeance.classList.add('acceptin-button-disabled');
         };
