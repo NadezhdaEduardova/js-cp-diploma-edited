@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
       
       document.querySelector(".page-nav__day_chosen").classList.remove("page-nav__day_chosen");
-			daydayLink.classList.add("page-nav__day_chosen");
+      daydayLink.classList.add("page-nav__day_chosen");
       
       let markTimeDay = Number(event.target.dataset.markTime);
       if (isNaN(markTimeDay)) {
